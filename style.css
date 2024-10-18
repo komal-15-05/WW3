@@ -243,17 +243,18 @@ nav > img{
   width: max(30%, 20rem);
   padding-top: 2rem;
   padding-bottom: 4rem;
+  background: linear-gradient(60deg, #6190e8,#a7bfe8,#F7AC82);
 }
 .left-header {
   font-size: 1.875rem;
   font-weight: 600;
-  color: #047857;
+  color: black;
   margin-bottom: 1rem;
 }
 .list {
   list-style-type: disc;
   list-style-position: inside;
-  color: #4b5563;
+  color: rgb(47, 52, 58);
   gap: 0.5rem;
 }
 .list-item {

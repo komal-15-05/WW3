@@ -49,14 +49,16 @@ submitButton.addEventListener("click", function (event) {
 
     const us = st.find((student) => {
       if (student.email == emailValue && student.password == passwordValue) {
-        console.log(student);
-        return student;
+            localStorage.setItem("user", JSON.stringify(student));
+            window.location.href = "/student/student.html";
+            return student;
       }
     });
     const fc = data.Faculty;
     us = fc.find((faculty) => {
       if (faculty.email == emailValue && faculty.password == passwordValue) {
         console.log(faculty);
+        localStorage.setItem("user", JSON.stringify(faculty));
         return faculty;
       }
     });

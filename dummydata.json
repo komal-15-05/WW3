@@ -181,5 +181,20 @@
             "faculty_id": 3,
             "student_id": 3
         }
+    ],
+    "Slots":[
+        {
+            "slot_id":1,
+            "faculty_id":1,
+            "slot_time": "14:00:00",
+            "slot_duration": 60,
+            "available": true
+        },{
+            "slot_id":1,
+            "faculty_id":1,
+            "slot_time": "16:00:00",
+            "slot_duration": 60,
+            "available": false
+        }
     ]
 }
