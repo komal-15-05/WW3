@@ -3,81 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>student dashboard</title>
-    <link rel="stylesheet" href="../utility.css">
+    <title>Welcome to SLIET Mentorship Program</title>
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="min-h-screen flex flex-col items-center bg-green-100 p-6">
-        <h1 class="text-5xl font-bold text-green-700 py-4">
-            Welcome to Mentorship Platform for SLIET!
-        </h1>
-        <div class="flex-container mb-10">
-            <div class="content">
-                <p class="heading">
-                    Connect, Learn, Achieve: Join Our Mentorship Program
-                </p>
-                <p class="subheading">
-                    Mentorship designed to elevate your potential and ignite your ambitions.
-                </p>
-                <p class="description">
-                    Our mentorship program is designed to help you achieve your academic and career goals. Whether you're looking for guidance on your studies, career advice, or personal development, our mentors are here to help you succeed. Sign up today to connect with a mentor and start your journey to success.
-                </p>
-                <div class="stats">
-                    <div>
-                        <div class="stat-number">50+</div>
-                        <div>Mentors</div>
-                    <div class="separator"></div>
-                    <div>
-                        <div class="stat-number">500+</div>
-                        <div>signed</div>
-                    </div>
-                    <div class="separator"></div>
-                    <div>
-                        <div class="stat-number">1k+</div>
-                        <div>Active Users</div>
-                    </div>
-                </div>
+        <img src="logo1.png" alt="SLIET Logo"> 
+        <h6>Sant Longowal Institute of Engineering and Technology</h6>
+    </div>
+
+    <div class="welcome-message" id="welcomeMessage">
+        <h1>Welcome to the Mentorship Program!</h1>
+        <h6>Guidance | Learning | Skill building</h6>
+
+    </div>
+    
+    <div class="left-section">
+      <p class="main-text">Connect, Learn, Achieve: Join Our Mentorship Program</p>
+      <p class="sub-text">Mentorship designed to elevate your potential and ignite your ambitions.</p>
+      <p class="description">
+        Our mentorship program is designed to help you achieve your academic and career goals. Whether you're looking for guidance on your studies, career advice, or personal development, our mentors are here to help you succeed. Sign up today to connect with a mentor and start your journey to success.
+      </p>
+    </div>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!--DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+      
+      </div>
+      
+      <div class="content">
+        <div class="left-section">
+          <p class="main-text">Connect, Learn, Achieve: Join Our Mentorship Program</p>
+          <p class="sub-text">Mentorship designed to elevate your potential and ignite your ambitions.</p>
+          <p class="description">
+            Our mentorship program is designed to help you achieve your academic and career goals. Whether you're looking for guidance on your studies, career advice, or personal development, our mentors are here to help you succeed. Sign up today to connect with a mentor and start your journey to success.
+          </p>
+          <div class="stats">
+            <div class="stat-item">
+              <div class="stat-number">50+</div>
+              <div>Mentors</div>
             </div>
-
-    <div class="min-h-screen flex flex-col items-center bg-green-100 p-6">
-        <h1 class="text-5xl font-bold text-green-700 py-4">
-            Student Sign-In
-        </h1>
-
-        <div class="bg-white shadow-md rounded-lg p-6 max-w-xl py-8">
-            <h2 class="text-3xl font-semibold text-green-600 mb-6">Welcome</h2>
-            <form action="#" method="POST" class="flex flex-col space-y-4">
-                <div class="flex flex-col">
-                    <label for="student-email" class="text-lg text-gray-700">Email</label>
-                    <input type="email" id="student-email" name="email" class="form-input" placeholder="Enter your email" required>
-                </div>
-                <div class="flex flex-col">
-                    <label for="student-password" class="text-lg text-gray-700">Password</label>
-                    <input type="password" id="student-password" name="password" class="form-input" placeholder="Enter your password" required>
-                </div>
-                <button type="submit" class="primary-btn">Sign In</button>
-            </form>
-            <p class="mt-4 text-gray-600">Don't have an account? <a href="/signup" class="text-green-600 font-semibold">Sign up here</a></p>
+            <Separator orientation="vertical" />
+            <div class="stat-item">
+              <div class="stat-number">500+</div>
+              <div>Signed</div>
+            </div>
+            <Separator orientation="vertical" />
+            <div class="stat-item">
+              <div class="stat-number">1k+</div>
+              <div>Active Users</div>
+            </div>
+          </div>
         </div>
+        <div class="right-section">
+          <h2 class="right-header">Why Choose Our Mentorship Program?</h2>
+          <ul class="list">
+            <li class="list-item"><strong>Verified Mentors:</strong> All our mentors are verified and vetted to ensure you receive high-quality guidance directly from trusted sources.</li>
+            <li class="list-item"><strong>Secure Platform:</strong> Our platform uses advanced security measures to protect your personal and information.</li>
+            <li class="list-item"><strong>Transparency:</strong> We believe in complete transparency. Every mentor profile includes detailed information about their expertise and background.</li>
+            <li class="list-item"><strong>Customer Support:</strong> Our dedicated customer support team is here to assist you with any inquiries or issues you might have.</li>
+          </ul>
+          <form class="form" id="signupForm">
+            <div class="inputs">
 
+              <span class="input-span" >
+                <label for="email" class="label">Email</label>
+                <input type="email" name="email" id="email"></span>
+                <span class="input-span">
+                  <label for="password" class="label">Password</label>
+                  <input type="password" name="password" id="password"></span>
+                </div>
+            <input class="submit" type="submit" value="Sign In" id="submit" disabled>
+          </form>
+        
+        </div>
+      </div>
     </div>
+    <div class="about"></div>
+    
+    <div class="contact"></div>
+    <script src="script.js"></script>
 
 </body>
 </html>
 
 
-            
 
-        <div class="flex justify-center w-full gap-6">
-            <a href="/login">
-                <button class="primary-btn">about</button>
-            </a>
-            <a href="/login">
-                <button class="secondary-btn">contact us</button>
-            </a>
-        </div>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to SLIET Mentorship Program</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+        <img src="logo1.png" alt="SLIET Logo"> 
+        <h6>Sant Longowal Institute of Engineering and Technology</h6>
     </div>
+
+    <div class="welcome-message" id="welcomeMessage">
+        <h1>Welcome to the Mentorship Program!</h1>
+        <h6>Guidance | Learning | Skill building</h6>
+
+    </div>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
+
