@@ -8,26 +8,71 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<nav>
 
-        <img src="logo1.png" alt="SLIET Logo"> 
-        <h6>Sant Longowal Institute of Engineering and Technology</h6>
-    </div>
-
-    <div class="welcome-message" id="welcomeMessage">
-        <h1>Welcome to the Mentorship Program!</h1>
-        <h6>Guidance | Learning | Skill building</h6>
-
-    </div>
+    <img src="assets/logo1.png" alt="SLIET Logo"> 
+    <h2>Sant Longowal Institute of Engineering and Technology</h2>
+</nav>
     
-    <div class="left-section">
+
+    <section class="welcome-page" data-color="white" >
+        <div class="welcome">
+
+            <h2 id="welcomeMessage">Welcome to the Mentorship Program!</h2>
+            <h6>Guidance | Learning | Skill building</h6>
+        </div>
+
+
+            <button class="signIn-btn">
+                <span class="signIn-btn__top-right">
+                    <span class="signIn-btn__inner-white"></span>
+                </span>
+                <span class="signIn-btn__bottom-left">
+                    <span class="signIn-btn__inner-white"></span>
+                </span>
+                <span class="signIn-btn__bg"></span>
+                <span class="signIn-btn__text">Get Started</span>
+            </button>
+
+          
+    </section>
+    <div class="separator"></div>
+    <section class="first-section" data-color="red">
       <p class="main-text">Connect, Learn, Achieve: Join Our Mentorship Program</p>
       <p class="sub-text">Mentorship designed to elevate your potential and ignite your ambitions.</p>
-      <p class="description">
-        Our mentorship program is designed to help you achieve your academic and career goals. Whether you're looking for guidance on your studies, career advice, or personal development, our mentors are here to help you succeed. Sign up today to connect with a mentor and start your journey to success.
-      </p>
-    </div>
-    
-    <script src="script.js"></script>
+      <div class="description">
+
+          <p >
+              Our mentorship program is designed to help you achieve your academic and career goals. Whether you're looking for guidance on your studies, career advice, or personal development, our mentors are here to help you succeed. Sign up today to connect with a mentor and start your journey to success. Our program offers personalized mentorship sessions, access to exclusive resources, and a supportive community of like-minded individuals. With our experienced mentors, you can gain valuable insights, develop new skills, and build a strong foundation for your future. Don't miss this opportunity to enhance your learning experience and achieve your full potential.
+            </p>
+            <img src="https://cdn2.iconfinder.com/data/icons/life-skills-color/64/leadership-menter-team-teamwork-partner-buddy-1024.png" alt="Mentor Image">
+        </div>
+    </section>
+    <div class="separator"></div>
+    <section class="second-section" id="login">
+        <div class="left-section">
+            <h2 class="left-header">Why Choose Our Mentorship Program?</h2>
+            <ul class="list">
+              <li class="list-item"><strong>Verified Mentors:</strong> All our mentors are verified and vetted to ensure you receive high-quality guidance directly from trusted sources.</li>
+              <li class="list-item"><strong>Secure Platform:</strong> Our platform uses advanced security measures to protect your personal and information.</li>
+              <li class="list-item"><strong>Transparency:</strong> We believe in complete transparency. Every mentor profile includes detailed information about their expertise and background.</li>
+              <li class="list-item"><strong>Customer Support:</strong> Our dedicated customer support team is here to assist you with any inquiries or issues you might have.</li>
+            </ul>
+          </div>
+        <form class="form" id="signupForm">
+            <div class="inputs">
+                
+          <span class="input-span" >
+              <label for="email" class="label">Email</label>
+              <input type="email" name="email" id="email"></span>
+              <span class="input-span">
+                  <label for="password" class="label">Password</label>
+                  <input type="password" name="password" id="password"></span>
+                </div>
+                <input class="submit" type="submit" value="Sign In" id="submit" disabled>
+            </form>
+        </section>
+            <script src="script.js"></script>
 
 </body>
 </html>
@@ -77,28 +122,7 @@
             </div>
           </div>
         </div>
-        <div class="right-section">
-          <h2 class="right-header">Why Choose Our Mentorship Program?</h2>
-          <ul class="list">
-            <li class="list-item"><strong>Verified Mentors:</strong> All our mentors are verified and vetted to ensure you receive high-quality guidance directly from trusted sources.</li>
-            <li class="list-item"><strong>Secure Platform:</strong> Our platform uses advanced security measures to protect your personal and information.</li>
-            <li class="list-item"><strong>Transparency:</strong> We believe in complete transparency. Every mentor profile includes detailed information about their expertise and background.</li>
-            <li class="list-item"><strong>Customer Support:</strong> Our dedicated customer support team is here to assist you with any inquiries or issues you might have.</li>
-          </ul>
-          <form class="form" id="signupForm">
-            <div class="inputs">
 
-              <span class="input-span" >
-                <label for="email" class="label">Email</label>
-                <input type="email" name="email" id="email"></span>
-                <span class="input-span">
-                  <label for="password" class="label">Password</label>
-                  <input type="password" name="password" id="password"></span>
-                </div>
-            <input class="submit" type="submit" value="Sign In" id="submit" disabled>
-          </form>
-        
-        </div>
       </div>
     </div>
     <div class="about"></div>
