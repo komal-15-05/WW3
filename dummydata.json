@@ -25,12 +25,13 @@
     "Faculty": [
         {
             "faculty_id": 1,
-            "Name": "Dr. Birmohan Singh",
+            "name": "Dr. Birmohan Singh",
             "Designation": "Professor",
             "Department": "Computer Science & Engineering",
             "Qualification": "Ph.D., M.E.",
             "email": "drbirmohansingh@gmail.com",
-            "password": "password123"
+            "password": "password123",
+            "image": "http://sliet.ac.in/wp-content/uploads/avatars/5/6fc17d6735998f4f22a0e91fbf43b75c-bpfull.jpg"
         },
         {
             "faculty_id": 2,
@@ -39,7 +40,8 @@
             "Department": "Computer Science & Engineering",
             "Qualification": "Ph.D.,  M.Tech, B.Tech.",
             "email": "drdamanpreetsingh@gmail.com",
-            "password": "password123"
+            "password": "password123",
+            "image":"http://sliet.ac.in/wp-content/uploads/avatars/4/65783e7db0473-bpfull.jpg"
         },
         {
             "faculty_id": 3,
@@ -48,16 +50,19 @@
             "Department": "Computer Science & Engineering",
             "Qualification": "Ph.D.,  M.Tech, B.Tech.",
             "email": "drmajorsinggorayah@gmail.com",
-            "password": "password123"
+            "password": "password123",
+            "image":"http://sliet.ac.in/wp-content/uploads/avatars/35/5e69c6be20c7e-bpfull.jpg"
         },
         {
             "faculty_id": 4,
-            "name": "Dr. Manoj Sachan",
+            "name": "Dr. Manoj Sachan ",
             "Designation": "Professor",
             "Department": "Computer Science & Engineering",
             "Qualification": "Ph.D.,  M.E, B.Tech.",
             "email": "drmanojsachan@gmail.com",
-            "password": "password123"
+            "password": "password123",
+            "image":"http://sliet.ac.in/wp-content/uploads/avatars/6/605c66bd3e3bc-bpfull.jpg"
+
         },
         {
             "faculty_id": 5,
@@ -66,7 +71,8 @@
             "Department": "Computer Science & Engineering",
             "Qualification": "Ph.D.,  M.S, B.E.",
             "email": "drgurjinderkaur@gmail.com",
-            "password": "password123"
+            "password": "password123",
+            "image":"http://sliet.ac.in/wp-content/uploads/avatars/14/5f2245e7a7f1bde5dee5bda48e09d411-bpfull.jpg"
         },
         {
             "faculty_id": 6,
@@ -75,7 +81,8 @@
             "Department": "Computer Science & Engineering",
             "Qualification": "Ph.D.,  M.Tech, B.Tech.",
             "email": "dramarnath@gmail.com",
-            "password": "password123"
+            "password": "password123",
+            "image":"http://sliet.ac.in/wp-content/uploads/avatars/14/5f2245e7a7f1bde5dee5bda48e09d411-bpfull.jpg"
         },
         {
             "faculty_id": 7,
@@ -84,7 +91,8 @@
             "Department": "Computer Science & Engineering",
             "Qualification": "Ph.D.,  M.Tech, B.Tech.",
             "email": "drjagdeepsingh@gmail.com",
-            "password": "password123"
+            "password": "password123",
+            "image":"http://sliet.ac.in/wp-content/uploads/avatars/467/66b8bb350cc46-bpfull.jpg"
         },
         {
             "faculty_id": 8,
@@ -93,7 +101,8 @@
             "Department": "Computer Science & Engineering",
             "Qualification": "Ph.D.,  M.Tech, B.Tech.",
             "email": "drmanmidersingh@gmail.com",
-            "password": "password123"
+            "password": "password123",
+            "image":"http://sliet.ac.in/wp-content/uploads/avatars/16/66693282b6269-bpfull.jpg"
         },
         {
             "faculty_id": 9,
@@ -102,7 +111,8 @@
             "Department": "Computer Science & Engineering",
             "Qualification": "Ph.D",
             "email": "drpreetpalkaurbuttar@gmail.com",
-            "password": "password123"
+            "password": "password123",
+            "image":"http://sliet.ac.in/wp-content/uploads/avatars/349/632d98c75d80f-bpfull.jpg"
         },
         {
             "faculty_id": 10,
@@ -111,7 +121,8 @@
             "Department": "Computer Science & Engineering",
             "Qualification": "Ph.D",
             "email": "drtajindersingh@gmail.com",
-            "password": "password123"
+            "password": "password123",
+            "image":"http://sliet.ac.in/wp-content/uploads/avatars/468/64e3532d30fac-bpfull.jpg"
         },
         {
             "faculty_id": 11,
@@ -120,7 +131,8 @@
             "Department": "Computer Science & Engineering",
             "Qualification": "Ph.D.,  M.Tech, B.Tech.",
             "email": "drutkarsh@gmail.com",
-            "password": "password123"
+            "password": "password123",
+            "image":"http://sliet.ac.in/wp-content/uploads/avatars/493/6165aace595a1-bpfull.jpg"
         },
         {
             "faculty_id": 13,
@@ -129,7 +141,8 @@
             "Department": "Computer Science & Engineering",
             "Qualification": "Ph.D",
             "email": "drvinodkumarverma@gmail.com",
-            "password": "password123"
+            "password": "password123",
+            "image":"http://sliet.ac.in/wp-content/uploads/avatars/17/28b95ba0ed455dca378c1ada58307bf6-bpfull.jpg"
         },
         {
             "faculty_id": 14,
@@ -138,7 +151,8 @@
             "Department": "Computer Science & Engineering",
             "Qualification": "M.E",
             "email": "jaspalsingh@gmail.com",
-            "password": "password123"
+            "password": "password123",
+            "image":"http://sliet.ac.in/wp-content/uploads/avatars/36/e0a878e8162fd75cb5eb6929d98df5c1-bpfull.jpg"
         },
         {
             "faculty_id": 15,
@@ -147,7 +161,8 @@
             "Department": "Computer Science & Engineering",
             "Qualification": "M.Tech, B.Tech.",
             "email": "rahulgautam@gmail.com",
-            "password": "password123"
+            "password": "password123",
+            "image":"http://sliet.ac.in/wp-content/uploads/avatars/350/666bf221c60a0-bpfull.jpg"
         }
     ],
     "Sessions": [
