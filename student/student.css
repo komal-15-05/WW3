@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
 body {
     font-family: Arial, sans-serif;
     background-color: black;
@@ -7,7 +13,7 @@ body {
     background-color: black;
 }
 
-h2 {
+h3 {
     font-size: 50px;
     font-weight: 700;
     color: white;
@@ -15,6 +21,7 @@ h2 {
 
 .container{
     display: flex;
+    align-items: center;
     justify-content: space-around;
     margin-top: 40px;
     gap: 20px;
@@ -22,7 +29,7 @@ h2 {
 }
 
 .session{
-    height: 250px;
+    height: 50vh;
     width: 45%;
     background: linear-gradient(60deg,#3387A1,#6FD0F0,#F7AC82);
     border-radius: 30px;
@@ -35,6 +42,7 @@ h2 {
 h2{
     color: black;
     font-size: 30px;
+    margin: 40px;
 }
 
 #pending{
@@ -51,6 +59,31 @@ h2{
     border: none;
     border-radius: 15px;
     cursor: pointer;
+    margin-top: 10%;
+    /* animation: movingbtn 1s infinite; */
+}
+
+.shake{
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-10px);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    75% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 section{
@@ -118,12 +151,6 @@ section{
     border-radius: 5px;
   }
 
-*{
-    margin: 0;
-    padding: 0;
-    font-family: poppins;
-    box-sizing: border-box;
-}
 
 .gallery{
     width: 900px;
@@ -166,15 +193,10 @@ section{
     flex-direction: row;
     flex-wrap: wrap;
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
+
 
 .card{
-    background-color:black;
+    background-color: dimgrey;
     height: 350px;
     width: 350px;
     border-radius: 30px;
@@ -186,7 +208,7 @@ section{
 }
 
 .title{
-    color: white;
+    color: black;
     margin-top: 20px;
     display : flex;
     justify-content: space-between;
@@ -194,6 +216,7 @@ section{
 }
 .title h2{
     text-align: left;
+    
 }
 
 .card img{
@@ -205,13 +228,13 @@ section{
 .separator{
     width: 80%;
     height: 1px;
-    background-color: rgb(161, 159, 156);
+    background-color: black;
     margin: 5px 30px;
 }
 
 .content {
     padding: 30px;
-    color: azure;
+    color: black;
 }
 
 .content ul{
@@ -258,4 +281,9 @@ section{
 
 .book:hover{
     background-color: #0056b3;
+}
+
+.scroll-text{
+    color: white;
+    font-size: 2em;
 }

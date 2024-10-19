@@ -31,13 +31,17 @@ scrollcontainer.addEventListener('wheel', (evt)=>{
 // });
 
 const setSessions = async () => {
-  const sessions = await data.Sessions;
+    console.log(localStorage.getItem("session"))
+  const sessions = JSON.parse(localStorage.getItem("session")) ?? await data.Sessions;
   console.log(sessions);
-  const userSessions = await sessions.filter((ses) => {
-    if (ses.student_id == user.student_id) {
-      return ses;
+  let userSessions = sessions;
+  if(Array.isArray(sessions)){
+      userSessions = sessions.filter((ses) => {
+          if (ses.student_id == user.student_id) {
+              return ses;
+            }
+        });
     }
-  });
 
   if (userSessions.length == 0) {
     document
@@ -49,7 +53,7 @@ const setSessions = async () => {
     return;
   }
 
-  userSessions.map((ses) => {
+  Array.isArray(userSessions) ?  userSessions.map((ses) => {
     console.log(ses);
     const faculty = data.Faculty.find((fac) => {
       if (fac.faculty_id == ses.faculty_id) {
@@ -67,7 +71,21 @@ const setSessions = async () => {
                 <p>${ses.session_location}</p>
             </div>`
     );
-  });
+  }) : faculty = data.Faculty.find((fac) => {
+    if (fac.faculty_id == userSessions.faculty_id) {
+      console.log(fac);
+      return fac;
+    }
+  });  document.querySelector("#sessionDetails").insertAdjacentHTML(
+    "beforeend",
+    `<div class="session-info">
+              <h2>${faculty.name}</h2>
+              <p>${userSessions.session_date}</p>
+              <p>${userSessions.session_time}</p>
+              <p>${userSessions.session_duration}</p>
+              <p>${userSessions.session_location}</p>
+          </div>`
+  );
 };
 
 const display = async () => {
@@ -126,7 +144,20 @@ const display = async () => {
         const bookbtn = document.getElementById(`book-session-${index}`);
         const fac_id = bookbtn.dataset.fac; // Corrected the way to access data attribute
         bookbtn.addEventListener("click", () => {
-            console.log(fac_id);
+            const selectedSlot = document.querySelector(`#book-session-${index}`).previousElementSibling.querySelector('select').value;
+            const sessionTemplate = {
+                session_id: Math.floor(Math.random() * 1000), // Generate a random session ID
+                session_name: `Session with ${teacher.name}`,
+                session_date: new Date().toISOString().split('T')[0], // Current date
+                session_time: selectedSlot,
+                session_duration: 60,
+                session_location: "Online", // Example location
+                faculty_id: fac_id,
+                student_id: user.student_id
+            };
+
+            localStorage.setItem('session', JSON.stringify(sessionTemplate));
+            alert('Session booked successfully!');
         });
     }
 });
@@ -137,3 +168,15 @@ setTimeout(() => {
     display();
 }, 2000);
 
+
+
+function buttonShake() {
+  const button = document.getElementById("btn");
+  button.classList.add("shake");
+
+  setTimeout(() => {
+      button.classList.remove("shake");
+  }, 1200); // Remove the class after 1.2 seconds
+}
+
+setInterval(buttonShake, 5000); // Shake every 7 seconds

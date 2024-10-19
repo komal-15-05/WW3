@@ -47,7 +47,7 @@ submitButton.addEventListener("click", function (event) {
     const st = data.Students;
     console.log(st);
 
-    const us = st.find((student) => {
+    let us = st.find((student) => {
       if (student.email == emailValue && student.password == passwordValue) {
             localStorage.setItem("user", JSON.stringify(student));
             window.location.href = "/student/student.html";
@@ -59,6 +59,7 @@ submitButton.addEventListener("click", function (event) {
       if (faculty.email == emailValue && faculty.password == passwordValue) {
         console.log(faculty);
         localStorage.setItem("user", JSON.stringify(faculty));
+        window.location.href = "/faculty/faculty.html"
         return faculty;
       }
     });
@@ -117,3 +118,4 @@ getStartedButton.addEventListener("click", function () {
         top: document.querySelector("#login").offsetTop,
         behavior: "smooth"
     })})
+

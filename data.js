@@ -82,7 +82,7 @@ const data = [
             "Qualification": "Ph.D.,  M.Tech, B.Tech.",
             "email": "dramarnath@gmail.com",
             "password": "password123",
-            "image":"http://sliet.ac.in/wp-content/uploads/avatars/14/5f2245e7a7f1bde5dee5bda48e09d411-bpfull.jpg",
+            "image":"http://sliet.ac.in/wp-content/uploads/avatars/467/66b8bb350cc46-bpfull.jpg",
         },
         {
             "faculty_id": 7,
