@@ -11,14 +11,14 @@ window.addEventListener("load", getData);
 
 const user = JSON.parse(localStorage.getItem("user"));
 
-// let scrollcontainer = document.querySelector('.gallery');
+let scrollcontainer = document.querySelector('.gallery');
 // let backbtn = document.querySelector("backbtn");
 // let nextbtn = document.querySelector("nextbtn");
 
-// scrollcontainer.addEventListener('wheel', (evt)=>{
-//     evt.preventDefault();
-//     scrollcontainer.scrollLeft += evt.deltaY;
-// });
+scrollcontainer.addEventListener('wheel', (evt)=>{
+    evt.preventDefault();
+    scrollcontainer.scrollLeft += evt.deltaY;
+});
 
 // nextbtn.addEventListener('click', ()=>{
 //     scrollcontainer.computedStyleMap.scrollbehavior = "smooth";
@@ -74,70 +74,66 @@ const display = async () => {
   const Faculty = data.Faculty;
   const slots = data.Slots;
   console.log(slots, Faculty);
-  Faculty.map(async (teacher) => {
+  Faculty.map(async (teacher, index) => {
     const slot = await slots.map((slot) => {
-      if (slot.faculty_id == teacher.faculty_id) {
-        return slot;
-      }
+        if (slot.faculty_id == teacher.faculty_id) {
+            return slot;
+        }
     });
-    const availableSlots = slot.filter((s) => s !== undefined);
-    document.querySelector(".sess").insertAdjacentHTML(
-      "beforeend",
-      `<div class="card">
-                <div class="title">
-                <div class="info">
-                <h2 class="name">${teacher.name}</h2>
-                <span class="designation">${teacher.Designation}</span>
-                </div>
-                <div class="image">
-                <img src=${teacher.image} alt="Image">
-                </div>
-        </div>
-        <div class="separator"></div>
-        <div class="content">
-            <ul>
-                <li>
-                    <span class="bold">Qualification: </span> <span>${
-                      teacher.Qualification
-                    }</span>
+    const availableSlots = slot.filter(s => s !== undefined);
+    const cardHTML = `
+        <div class="card">
+            <div class="title">
+                    <div class="info">
+                        <h2 class="name">${teacher.name}</h2>
+                        <span class="designation">${teacher.Designation}</span>
+                    </div>
+                    <div class="image">
+                        <img src=${teacher.image} alt="Image">
+                    </div>
+            </div>
+            <div class="separator"></div>
+            <div class="content">
+                <ul>
+                    <li>
+                        <span class="bold">Qualification: </span> <span>${teacher.Qualification}</span>
                     </li>
                     <li>
-                    <span class="bold">Phone : </span> <span>+91-1672-253208</span>
+                        <span class="bold">Phone : </span> <span>+91-1672-253208</span>
                     </li>
                     <li>
-                    
-                    <span class="bold">Email: </span> <span><a href="mailto:${
-                      teacher.email
-                    }">${teacher.email}</a></span>
+                        <span class="bold">Email: </span> <span><a href="mailto:${teacher.email}">${teacher.email}</a></span>
                     </li>
-                    </ul>
-                    <div class="lower">
-                    
+                </ul>
+                <div class="lower">
                     <div class="select">
-                    ${
-                      availableSlots.length > 0
-                        ? `<select>${availableSlots
-                            .map(
-                              (s) =>
-                                `<option value="${s.slot_id}">${s.slot_time}</option>`
-                            )
-                            .join("")}</select>`
-                        : `<span>Busy now</span>`
-                    }
+                        ${
+                            availableSlots.length > 0 
+                            ? `<select>${availableSlots.map(s => s.available ? `<option value="${s.slot_id}">${s.slot_time}</option>` : `<option value = "${s.sloot_id}" disabled>${s.slot_time}<span class="not-available">Booked</span></option>`).join('')}</select>`
+                            : `<span class="busy">Busy now</span>`
+                        }
                     </div>
-                    ${
-                      availableSlots.length > 0
-                        ? '<button class="book">Book a Session</button>'
-                        : ""
-                    }
-                    </div>
-                    </div>
-                    </div>`
-    );
-  });
+                    ${availableSlots.length > 0 ? `<button class="book" id="book-session-${index}" type="button" data-fac=${teacher.faculty_id}>Book a Session</button>` : ''}
+                </div>
+            </div>
+        </div>
+    `;
+    let cardContainer = document.createElement('div');
+    cardContainer.insertAdjacentHTML('beforeend', cardHTML);
+    document.querySelector(".gallery").appendChild(cardContainer);
+
+    if (availableSlots.length > 0) {
+        const bookbtn = document.getElementById(`book-session-${index}`);
+        const fac_id = bookbtn.dataset.fac; // Corrected the way to access data attribute
+        bookbtn.addEventListener("click", () => {
+            console.log(fac_id);
+        });
+    }
+});
 };
 
 setTimeout(() => {
-  setSessions();
-  display();
+    setSessions();
+    display();
 }, 2000);
+

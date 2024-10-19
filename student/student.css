@@ -57,17 +57,10 @@ section{
     display: block;
     margin-top: 20px;
     background-color: white;
-
 }
 
 
-.card{
-    background-color:black;
-    height: 350px;
-    width: 350px;
-    border-radius: 30px;
-    padding: 10px 20px;
-  }
+
   
   .bold{
     font-weight: 700;
@@ -81,10 +74,21 @@ section{
     align-items: center;
   
   }
+  .name{
+    color: white;
+    font-size: large;
+  }
+
+  .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
   
   .card img{
     aspect-ratio: 1/1;
-    width: 100%;
+    width: 80px;
     border-radius: 50%;
   }
   .separator{
@@ -105,45 +109,15 @@ section{
     padding: 0;
   }
   
-  
-  .lower{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .select select {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    color: #333;
-    font-size: 16px;
-    outline: none;
-    cursor: pointer;
-    transition: border-color 0.3s;
-  }
-  
-  .select select:focus {
-    border-color: #007BFF;
-  }
-  
-  .select select option {
-    padding: 10px;
-  }
-  
-  .book{
-    background-color: #007BFF;
+
+
+  .not-available{
+    background-color: #dc3545;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
   }
-  
-  .book:hover{
-    background-color: #0056b3;
-  }
+
 *{
     margin: 0;
     padding: 0;
@@ -154,22 +128,15 @@ section{
 .gallery{
     width: 900px;
     display: flex;
+    gap: 3rem;
+    height: max-content;
     overflow-x: scroll;
+}
 
-}
 .gallery div{
-    width: 100%;
-    display: grid;
-    grid-template-columns: auto auto auto ;
-    grid-gap: 20px;
-    padding: 10px;
-    flex: none;
+    height: max-content;
 }
-.gallery div img{
-    width: 100%;
-    filter:grayscale(100%);
-    transition: all 0.5s ease;
-}
+
 .gallery ::webkit-scrollbar{
     display: none;
 }
@@ -185,12 +152,11 @@ section{
     margin: 40px;
     
 }
-.gallery div img:hover{
-    filter:grayscale(0);
-    cursor: pointer;
-    transform: scale(1.1);
 
-    
+.busy {
+    width: 50px;
+    border: 2px solid white;
+    padding: 5px 15px;
 }
 
 
@@ -199,4 +165,97 @@ section{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card{
+    background-color:black;
+    height: 350px;
+    width: 350px;
+    border-radius: 30px;
+    padding: 10px 20px;
+}
+
+.bold{
+    font-weight: 700;
+}
+
+.title{
+    color: white;
+    margin-top: 20px;
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title h2{
+    text-align: left;
+}
+
+.card img{
+    aspect-ratio: 1/1;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.separator{
+    width: 80%;
+    height: 1px;
+    background-color: rgb(161, 159, 156);
+    margin: 5px 30px;
+}
+
+.content {
+    padding: 30px;
+    color: azure;
+}
+
+.content ul{
+    list-style: none;
+    margin-bottom: 20px;
+    padding: 0;
+    text-align: left;
+}
+
+.lower{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.select select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.select select:focus {
+    border-color: #007BFF;
+}
+
+.select select option {
+    padding: 10px;
+}
+
+.book{
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.book:hover{
+    background-color: #0056b3;
 }

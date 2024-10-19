@@ -1,0 +1,107 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #87CEFA, #FFA07A);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Dashboard layout */
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.box {
+    flex: 1;
+    min-width: 280px;
+    padding: 20px;
+    background-color: #F0F8FF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* Dropdown menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.dropbtn {
+    background-color: #FFA07A;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    padding: 10px;
+}
+
+.dropdown-content label {
+    display: block;
+    padding: 8px 0;
+    color: #333;
+    cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Button for scheduling */
+.schedule-btn {
+    margin-top: 20px;
+    background-color: #FFA07A;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.schedule-btn:hover {
+    background-color: #FF6347;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+    }
+}
+
+.session-item {
+    background-color: #FFF8DC;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
